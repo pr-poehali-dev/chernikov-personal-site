@@ -348,7 +348,7 @@ export default function Index() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="cta-primary text-lg px-8 py-6 font-semibold" asChild>
-                <a href="https://t.me/chernikovgpt" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/message/YRBE2VIUHPMYN1" target="_blank" rel="noopener noreferrer">
                   <Icon name="Calendar" className="mr-2" />
                   Записаться на консультацию
                 </a>
