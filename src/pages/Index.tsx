@@ -29,6 +29,19 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background neural-pattern">
+      {/* Floating Particles */}
+      <div className="floating-particles">
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+      </div>
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="container mx-auto px-6 py-4">
@@ -86,7 +99,7 @@ export default function Index() {
                   className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-3xl -z-10 animate-pulse-glow"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-3xl -z-10 pulse-glow"></div>
             </div>
           </div>
         </div>
