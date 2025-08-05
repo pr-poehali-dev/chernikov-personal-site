@@ -54,23 +54,23 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="hero-text heading-font mb-6">
                 <span className="gradient-text">Эксперт по нейросетям</span>
                 <br />
-                и автоматизации бизнеса
+                <span className="heading-font">и автоматизации бизнеса</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 CEO IT-компании Super-SMM • 15 лет опыта • Обучил более 10,000 человек • 
                 Упаковал более 70 бизнесов с помощью ИИ
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8 py-6" asChild>
+                <Button size="lg" className="cta-primary text-lg px-8 py-6 font-semibold" asChild>
                   <a href="https://chernikovgpt.ru/" target="_blank" rel="noopener noreferrer">
                     <Icon name="Zap" className="mr-2" />
                     Хакни Нейросети
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6" asChild>
+                <Button variant="outline" size="lg" className="cta-secondary text-lg px-8 py-6 font-semibold" asChild>
                   <a href="https://wa.me/message/YRBE2VIUHPMYN1" target="_blank" rel="noopener noreferrer">
                     <Icon name="Phone" className="mr-2" />
                     Заказать выступление
@@ -103,7 +103,7 @@ export default function Index() {
               { number: "500", label: "статей с ИИ", suffix: "+" }
             ].map((stat, index) => (
               <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">
+                <div className="stat-number mb-2">
                   {stat.number}{stat.suffix}
                 </div>
                 <div className="text-muted-foreground">{stat.label}</div>
@@ -117,7 +117,7 @@ export default function Index() {
       <section id="expertise" className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="text-4xl lg:text-5xl heading-font mb-4">
               <span className="gradient-text">Экспертиза</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -164,7 +164,7 @@ export default function Index() {
                 features: ["Собственные продукты", "API интеграции", "Скалируемые решения"]
               }
             ].map((service, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 animate-fade-in border-border/50 hover:border-primary/50" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className="expertise-card group animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
@@ -192,7 +192,7 @@ export default function Index() {
       <section id="achievements" className="py-20 bg-card/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="text-4xl lg:text-5xl heading-font mb-4">
               <span className="gradient-text">Достижения и регалии</span>
             </h2>
           </div>
@@ -248,7 +248,7 @@ export default function Index() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="text-4xl lg:text-5xl heading-font mb-4">
               <span className="gradient-text">Авторские курсы</span>
             </h2>
           </div>
@@ -288,7 +288,7 @@ export default function Index() {
       <section id="contact" className="py-20 bg-card/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-4xl lg:text-5xl heading-font mb-6">
               <span className="gradient-text">Готовы внедрить ИИ в ваш бизнес?</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12">
@@ -334,13 +334,13 @@ export default function Index() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6" asChild>
+              <Button size="lg" className="cta-primary text-lg px-8 py-6 font-semibold" asChild>
                 <a href="https://t.me/chernikovgpt" target="_blank" rel="noopener noreferrer">
                   <Icon name="Calendar" className="mr-2" />
                   Записаться на консультацию
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6" asChild>
+              <Button variant="outline" size="lg" className="cta-secondary text-lg px-8 py-6 font-semibold" asChild>
                 <a href="https://disk.yandex.ru/i/JPdPEtgswoRAdQ" target="_blank" rel="noopener noreferrer">
                   <Icon name="Download" className="mr-2" />
                   Скачать презентацию

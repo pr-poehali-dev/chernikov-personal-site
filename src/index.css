@@ -105,7 +105,7 @@
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 @layer utilities {
   .gradient-text {
@@ -161,5 +161,69 @@
   nav {
     position: relative;
     z-index: 10;
+  }
+
+  /* Enhanced typography */
+  .heading-font {
+    font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-text {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    line-height: 1.1;
+    font-weight: 900;
+  }
+
+  /* Enhanced CTA buttons */
+  .cta-primary {
+    background: linear-gradient(135deg, #0066ff 0%, #3b82f6 100%);
+    box-shadow: 0 8px 32px rgba(0, 102, 255, 0.3);
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 102, 255, 0.4);
+    background: linear-gradient(135deg, #0052cc 0%, #2563eb 100%);
+  }
+
+  .cta-secondary {
+    border: 2px solid #0066ff;
+    background: rgba(0, 102, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .cta-secondary:hover {
+    background: rgba(0, 102, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 102, 255, 0.2);
+  }
+
+  /* Stats animation */
+  .stat-number {
+    background: linear-gradient(135deg, #0066ff 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  /* Enhanced cards */
+  .expertise-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 102, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .expertise-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 102, 255, 0.3);
+    transform: translateY(-4px);
   }
 }
