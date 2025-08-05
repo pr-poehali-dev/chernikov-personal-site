@@ -3,6 +3,30 @@ import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 
 export default function Index() {
+  const courses = [
+    {
+      title: "Хакни Нейросети",
+      description: "Флагманская программа по освоению ИИ для бизнеса",
+      price: "Популярный курс",
+      features: ["Практическое применение ИИ", "Экономия 60% времени", "Создание вирусного контента", "Ассистенты и делегирование"],
+      link: "https://chernikovgpt.ru/"
+    },
+    {
+      title: "Огненные автоворонки",
+      description: "Создание автоматических воронок продаж",
+      price: "Высокая конверсия",
+      features: ["Автоматические воронки", "Интеграция с CRM", "Системы получения клиентов", "Масштабирование продаж"],
+      link: "https://vk.com/chernikovpsiholog"
+    },
+    {
+      title: "Огненный марафон по SMM",
+      description: "Комплексное обучение маркетингу в соцсетях",
+      price: "Марафон",
+      features: ["SMM стратегии", "Контент-планы", "Аналитика и метрики", "Работа с аудиторией"],
+      link: "https://firemarafon.firebaseapp.com/"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background neural-pattern">
       {/* Navigation */}
@@ -138,7 +162,7 @@ export default function Index() {
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
-                      <Icon name={service.icon as any} className="w-6 h-6 text-primary" />
+                      <Icon name={service.icon as any} className="w-6 h-6 text-primary icon-hover" />
                     </div>
                     <h3 className="text-xl font-semibold">{service.title}</h3>
                   </div>
@@ -146,7 +170,7 @@ export default function Index() {
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm">
-                        <Icon name="Check" className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                        <Icon name="Check" className="w-4 h-4 text-primary mr-2 flex-shrink-0 icon-hover" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -182,7 +206,7 @@ export default function Index() {
               {
                 icon: "Building",
                 title: "Госпартнеры",
-                description: "Сотрудничество с «Мой Бизнес», Росмолодежь, «Опора России»"
+                description: "Сотрудничество с «Мой Бизнес», МКУ «ЦРП», Росмолодежь, «Опора России»"
               },
               {
                 icon: "Tv",
@@ -197,13 +221,13 @@ export default function Index() {
               {
                 icon: "TrendingUp",
                 title: "Корпоративные клиенты",
-                description: "MetLife, Альфа-Банк, Sokroma и другие крупные компании"
+                description: "MetLife, ЭкоЦентр, Sokroma и другие крупные компании"
               }
             ].map((achievement, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 animate-fade-in border-border/50 hover:border-primary/50" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon name={achievement.icon as any} className="w-8 h-8 text-primary" />
+                    <Icon name={achievement.icon as any} className="w-8 h-8 text-primary icon-hover" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{achievement.title}</h3>
                   <p className="text-muted-foreground">{achievement.description}</p>
@@ -223,33 +247,8 @@ export default function Index() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Хакни Нейросети",
-                description: "Флагманская программа по освоению ИИ для бизнеса",
-                price: "Популярный курс",
-                features: ["Практическое применение ИИ", "Экономия 60% времени", "Создание вирусного контента", "Ассистенты и делегирование"]
-              },
-              {
-                title: "Хакни ВКонтакте",
-                description: "Автоматизация бизнеса в социальных сетях",
-                price: "Проверено временем",
-                features: ["Автоматизация SMM", "Чат-боты для продаж", "Системы лидогенерации", "Запуск бизнеса с нуля"]
-              },
-              {
-                title: "Огненные автоворонки",
-                description: "Создание автоматических воронок продаж",
-                price: "Высокая конверсия",
-                features: ["Автоматические воронки", "Интеграция с CRM", "Системы получения клиентов", "Масштабирование продаж"]
-              },
-              {
-                title: "Огненный марафон по SMM",
-                description: "Комплексное обучение маркетингу в соцсетях",
-                price: "Марафон",
-                features: ["SMM стратегии", "Контент-планы", "Аналитика и метрики", "Работа с аудиторией"]
-              }
-            ].map((course, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {courses.map((course, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 animate-fade-in border-border/50 hover:border-primary/50" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-8">
                   <div className="flex justify-between items-start mb-4">
@@ -262,13 +261,15 @@ export default function Index() {
                   <ul className="space-y-3 mb-6">
                     {course.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center">
-                        <Icon name="Check" className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+                        <Icon name="Check" className="w-5 h-5 text-primary mr-3 flex-shrink-0 icon-hover" />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full">
-                    Узнать подробнее
+                  <Button className="w-full" asChild>
+                    <a href={course.link} target="_blank" rel="noopener noreferrer">
+                      Узнать подробнее
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
@@ -292,7 +293,7 @@ export default function Index() {
               <Card className="text-center hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Icon name="Phone" className="w-6 h-6 text-primary" />
+                    <Icon name="Phone" className="w-6 h-6 text-primary icon-hover" />
                   </div>
                   <h3 className="font-semibold mb-2">Телефон</h3>
                   <a href="tel:+79520961106" className="text-primary hover:underline">
@@ -304,7 +305,7 @@ export default function Index() {
               <Card className="text-center hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Icon name="MessageCircle" className="w-6 h-6 text-primary" />
+                    <Icon name="MessageCircle" className="w-6 h-6 text-primary icon-hover" />
                   </div>
                   <h3 className="font-semibold mb-2">Telegram</h3>
                   <a href="https://t.me/chernikovgpt" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
@@ -316,7 +317,7 @@ export default function Index() {
               <Card className="text-center hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Icon name="Globe" className="w-6 h-6 text-primary" />
+                    <Icon name="Globe" className="w-6 h-6 text-primary icon-hover" />
                   </div>
                   <h3 className="font-semibold mb-2">Сайт школы ИИ</h3>
                   <a href="https://chernikovgpt.ru/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
@@ -327,13 +328,17 @@ export default function Index() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6">
-                <Icon name="Calendar" className="mr-2" />
-                Записаться на консультацию
+              <Button size="lg" className="text-lg px-8 py-6" asChild>
+                <a href="https://t.me/chernikovgpt" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Calendar" className="mr-2" />
+                  Записаться на консультацию
+                </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                <Icon name="Download" className="mr-2" />
-                Скачать презентацию
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6" asChild>
+                <a href="https://disk.yandex.ru/i/JPdPEtgswoRAdQ" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Download" className="mr-2" />
+                  Скачать презентацию
+                </a>
               </Button>
             </div>
           </div>
@@ -360,7 +365,7 @@ export default function Index() {
             </div>
           </div>
           <div className="text-center mt-8 text-muted-foreground">
-            <p>© 2024 Сергей Черников. Эксперт по нейросетям и автоматизации бизнеса.</p>
+            <p>© 2025 Сергей Черников. Эксперт по нейросетям и автоматизации бизнеса.</p>
           </div>
         </div>
       </footer>
