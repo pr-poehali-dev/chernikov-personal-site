@@ -117,7 +117,7 @@
 
   .neural-pattern {
     background-image:
-      url("/img/77f67250-559e-4faa-a249-4aad6574d8b2.jpg"),
+      url("/img/18bc385f-d88f-43d7-93bf-9d5f137a9522.jpg"),
       radial-gradient(
         circle at 25% 25%,
         rgba(0, 102, 255, 0.08) 0%,
@@ -140,7 +140,9 @@
       100% 100%,
       100% 100%;
     background-position: center, center, center, center;
-    background-blend-mode: overlay;
+    background-blend-mode: soft-light;
+    position: relative;
+    z-index: 0;
   }
 
   .icon-hover {
@@ -150,5 +152,14 @@
   .icon-hover:hover {
     transform: scale(1.2);
     color: hsl(var(--primary));
+  }
+
+  /* Ensure interactive elements are above background */
+  button,
+  a,
+  .card,
+  nav {
+    position: relative;
+    z-index: 10;
   }
 }
