@@ -41,7 +41,7 @@ export default function Index() {
               <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
             </div>
             <Button size="sm" className="animate-pulse-glow" asChild>
-              <a href="https://t.me/chernikovgpt" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/message/YRBE2VIUHPMYN1" target="_blank" rel="noopener noreferrer">
                 Связаться
               </a>
             </Button>
