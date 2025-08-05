@@ -40,8 +40,10 @@ export default function Index() {
               <a href="#achievements" className="text-muted-foreground hover:text-primary transition-colors">Достижения</a>
               <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
             </div>
-            <Button size="sm" className="animate-pulse-glow">
-              Связаться
+            <Button size="sm" className="animate-pulse-glow" asChild>
+              <a href="https://t.me/chernikovgpt" target="_blank" rel="noopener noreferrer">
+                Связаться
+              </a>
             </Button>
           </div>
         </div>
@@ -62,13 +64,17 @@ export default function Index() {
                 Упаковал более 70 бизнесов с помощью ИИ
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8 py-6">
-                  <Icon name="Zap" className="mr-2" />
-                  Хакни Нейросети
+                <Button size="lg" className="text-lg px-8 py-6" asChild>
+                  <a href="https://chernikovgpt.ru/" target="_blank" rel="noopener noreferrer">
+                    <Icon name="Zap" className="mr-2" />
+                    Хакни Нейросети
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                  <Icon name="Phone" className="mr-2" />
-                  Заказать выступление
+                <Button variant="outline" size="lg" className="text-lg px-8 py-6" asChild>
+                  <a href="https://wa.me/message/YRBE2VIUHPMYN1" target="_blank" rel="noopener noreferrer">
+                    <Icon name="Phone" className="mr-2" />
+                    Заказать выступление
+                  </a>
                 </Button>
               </div>
             </div>
