@@ -1,393 +1,287 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 
-export default function Index() {
-  const courses = [
+const Index = () => {
+  const features = [
     {
-      title: "Хакни Нейросети",
-      description: "Флагманская программа по освоению ИИ для бизнеса",
-      price: "Популярный курс",
-      features: ["Практическое применение ИИ", "Экономия 60% времени", "Создание вирусного контента", "Ассистенты и делегирование"],
-      link: "https://chernikovgpt.ru/"
+      title: "Быстрый старт",
+      description: "Запустите свой IT-бизнес всего за 30 дней без технических знаний",
+      icon: "Rocket",
     },
     {
-      title: "Огненные автоворонки",
-      description: "Создание автоматических воронок продаж",
-      price: "Высокая конверсия",
-      features: ["Автоматические воронки", "Интеграция с CRM", "Системы получения клиентов", "Масштабирование продаж"],
-      link: "https://vk.com/chernikovpsiholog"
+      title: "Высокий доход",
+      description: "Получайте от 500,000 рублей в месяц на внедрении ИИ-решений",
+      icon: "TrendingUp",
     },
     {
-      title: "Огненный марафон по SMM",
-      description: "Комплексное обучение маркетингу в соцсетях",
-      price: "Марафон",
-      features: ["SMM стратегии", "Контент-планы", "Аналитика и метрики", "Работа с аудиторией"],
-      link: "https://firemarafon.firebaseapp.com/"
-    }
+      title: "Готовые решения",
+      description: "Используйте проверенные ИИ-инструменты для автоматизации бизнеса",
+      icon: "Settings",
+    },
+    {
+      title: "Поддержка 24/7",
+      description: "Получите персональное сопровождение на всех этапах развития",
+      icon: "Headphones",
+    },
+  ];
+
+  const benefits = [
+    "✅ Без опыта в программировании",
+    "✅ Готовые ИИ-решения для бизнеса",
+    "✅ Проверенная бизнес-модель",
+    "✅ Поддержка экспертов",
+    "✅ Быстрая окупаемость вложений",
+    "✅ Масштабируемый доход",
   ];
 
   return (
-    <div className="min-h-screen bg-background neural-pattern">
-      {/* Floating Particles */}
-      <div className="floating-particles">
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-      </div>
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <div className="gradient-text font-bold text-xl">Сергей Черников</div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#hero" className="text-muted-foreground hover:text-primary transition-colors">Главная</a>
-              <a href="#expertise" className="text-muted-foreground hover:text-primary transition-colors">Экспертиза</a>
-              <a href="#achievements" className="text-muted-foreground hover:text-primary transition-colors">Достижения</a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Header */}
+      <header className="border-b border-blue-800/20 bg-slate-900/80 backdrop-blur-sm">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+              <Icon name="Brain" size={20} className="text-white" />
             </div>
-            <Button size="sm" className="animate-pulse-glow" asChild>
-              <a href="https://wa.me/message/YRBE2VIUHPMYN1" target="_blank" rel="noopener noreferrer">
-                Связаться
-              </a>
+            <span className="text-xl font-bold text-white">Formula Lite</span>
+          </div>
+          <Button variant="default" className="bg-orange-500 hover:bg-orange-600 text-white">
+            Начать сейчас
+          </Button>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30">
+                  🚀 Запуск IT-бизнеса
+                </Badge>
+                <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
+                  Как ОТКРЫТЬ
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"> IT-бизнес</span>
+                  <br />
+                  с доходом от{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+                    500.000₽
+                  </span>
+                  <br />
+                  за 30 дней
+                </h1>
+                <p className="text-xl text-slate-300 leading-relaxed">
+                  Начав зарабатывать на внедрении{" "}
+                  <span className="text-orange-400 font-semibold">Искусственного Интеллекта</span> в бизнес
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                {benefits.slice(0, 3).map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="text-green-400 text-lg">{benefit.split(' ')[0]}</div>
+                    <span className="text-slate-200">{benefit.substring(2)}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-lg px-8 py-6"
+                >
+                  Получить доступ сейчас
+                  <Icon name="ArrowRight" size={20} className="ml-2" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-slate-600 text-slate-300 hover:bg-slate-800 text-lg px-8 py-6"
+                >
+                  <Icon name="Play" size={20} className="mr-2" />
+                  Смотреть презентацию
+                </Button>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-blue-500/20 rounded-3xl blur-3xl"></div>
+              <img 
+                src="/img/1b3658c3-25c4-411e-95cb-260de312c4cd.jpg" 
+                alt="IT-бизнес на ИИ" 
+                className="relative rounded-2xl shadow-2xl w-full"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4 rounded-2xl shadow-xl">
+                <div className="text-2xl font-bold">500.000₽+</div>
+                <div className="text-sm opacity-90">в месяц</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30 mb-4">
+              Преимущества
+            </Badge>
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">
+              Почему выбирают нашу{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+                методику
+              </span>
+            </h2>
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Проверенная система запуска IT-бизнеса с гарантированным результатом
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => (
+              <Card key={index} className="bg-slate-900/50 border-slate-700 hover:border-orange-500/30 transition-all duration-300 group">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name={feature.icon as any} size={24} className="text-white" />
+                  </div>
+                  <CardTitle className="text-white text-xl">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-slate-300 text-base leading-relaxed">
+                    {feature.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">
+              Что вы получите
+            </h2>
+            <p className="text-xl text-slate-300">
+              Полный пакет инструментов для запуска прибыльного IT-бизнеса
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-4 p-6 bg-slate-900/50 rounded-2xl border border-slate-700">
+                <div className="text-green-400 text-2xl font-bold">✅</div>
+                <span className="text-slate-200 text-lg">{benefit.substring(2)}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-xl px-12 py-8"
+            >
+              Начать зарабатывать сегодня
+              <Icon name="Sparkles" size={24} className="ml-3" />
             </Button>
           </div>
         </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section id="hero" className="pt-32 pb-20">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <h1 className="hero-text heading-font mb-6">
-                <span className="gradient-text">Эксперт по нейросетям</span>
-                <br />
-                <span className="heading-font">и автоматизации бизнеса</span>
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                CEO IT-компании Super-SMM • 15 лет опыта • Обучил более 10,000 человек • 
-                Упаковал более 70 бизнесов с помощью ИИ
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="cta-primary text-lg px-8 py-6 font-semibold" asChild>
-                  <a href="https://chernikovgpt.ru/" target="_blank" rel="noopener noreferrer">
-                    <Icon name="Zap" className="mr-2" />
-                    Хакни Нейросети
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" className="cta-secondary text-lg px-8 py-6 font-semibold" asChild>
-                  <a href="https://wa.me/message/YRBE2VIUHPMYN1" target="_blank" rel="noopener noreferrer">
-                    <Icon name="Phone" className="mr-2" />
-                    Заказать выступление
-                  </a>
-                </Button>
-              </div>
-            </div>
-            <div className="relative animate-fade-in-up">
-              <div className="relative z-10">
-                <img 
-                  src="https://cdn.poehali.dev/files/4282ad21-3989-4752-aea9-2bca5596d576.png" 
-                  alt="Сергей Черников" 
-                  className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-3xl -z-10 pulse-glow"></div>
-            </div>
-          </div>
-        </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-card/30">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { number: "15", label: "лет опыта", suffix: "+" },
-              { number: "10", label: "тысяч учеников", suffix: "K+" },
-              { number: "70", label: "упакованных бизнесов", suffix: "+" },
-              { number: "500", label: "статей с ИИ", suffix: "+" }
-            ].map((stat, index) => (
-              <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="stat-number mb-2">
-                  {stat.number}{stat.suffix}
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-orange-500/10 to-blue-500/10">
+        <div className="container mx-auto max-w-4xl text-center">
+          <div className="space-y-8">
+            <h2 className="text-4xl lg:text-6xl font-bold text-white">
+              Готовы начать?
+            </h2>
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Присоединяйтесь к тысячам предпринимателей, которые уже зарабатывают на ИИ-технологиях
+            </p>
+            
+            <div className="bg-slate-900/80 p-8 rounded-3xl border border-slate-700 max-w-md mx-auto">
+              <div className="space-y-4">
+                <div className="text-orange-400 text-sm font-semibold uppercase tracking-wide">
+                  Специальное предложение
                 </div>
-                <div className="text-muted-foreground">{stat.label}</div>
+                <div className="text-4xl font-bold text-white">
+                  <span className="line-through text-slate-500 text-2xl">97,000₽</span>
+                  <br />
+                  47,000₽
+                </div>
+                <div className="text-slate-300 text-sm">
+                  Скидка 50% только сегодня
+                </div>
+                <Button 
+                  size="lg" 
+                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-lg py-6"
+                >
+                  Получить доступ за 47,000₽
+                </Button>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Expertise Section */}
-      <section id="expertise" className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl heading-font mb-4">
-              <span className="gradient-text">Экспертиза</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Комплексные решения для автоматизации бизнеса с помощью искусственного интеллекта
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: "Brain",
-                title: "Нейросети и ИИ",
-                description: "Создание контента, автоматизация процессов, интеграция ИИ-инструментов",
-                features: ["Собственный агрегатор ИИ", "Экономия 60% времени", "Работа без VPN"]
-              },
-              {
-                icon: "Cog",
-                title: "Автоматизация бизнеса",
-                description: "Чат-боты, автоворонки продаж, системы лидогенерации",
-                features: ["Чат-боты для продаж", "Автоворонки", "CRM интеграции"]
-              },
-              {
-                icon: "Users",
-                title: "Обучение и консалтинг",
-                description: "Корпоративное обучение, консалтинг по внедрению ИИ",
-                features: ["Авторские программы", "10,000+ учеников", "Госпартнеры"]
-              },
-              {
-                icon: "Megaphone",
-                title: "SMM и маркетинг",
-                description: "Автоматизация соцсетей, контент-маркетинг с ИИ",
-                features: ["Сервисы для ВКонтакте", "Вирусный контент", "Системы продаж"]
-              },
-              {
-                icon: "Mic",
-                title: "Спикерство",
-                description: "Выступления на конференциях, корпоративные тренинги",
-                features: ["10,000+ часов на сцене", "По всей России", "Различные форматы"]
-              },
-              {
-                icon: "Rocket",
-                title: "IT-разработка",
-                description: "Создание ИИ-сервисов, интеграция технологий",
-                features: ["Собственные продукты", "API интеграции", "Скалируемые решения"]
-              }
-            ].map((service, index) => (
-              <Card key={index} className="expertise-card group animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
-                      <Icon name={service.icon as any} className="w-6 h-6 text-primary icon-hover" />
-                    </div>
-                    <h3 className="text-xl font-semibold">{service.title}</h3>
-                  </div>
-                  <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm">
-                        <Icon name="Check" className="w-4 h-4 text-primary mr-2 flex-shrink-0 icon-hover" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Achievements Section */}
-      <section id="achievements" className="py-20 bg-card/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl heading-font mb-4">
-              <span className="gradient-text">Достижения и регалии</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: "Award",
-                title: "Бренд года 2020",
-                description: "Номинация «Прорыв года»"
-              },
-              {
-                icon: "BookOpen",
-                title: "Публикации",
-                description: "Журнал «100 лучших экспертов», книги «100 счастливых миллионеров» и «ЛИЦА»"
-              },
-              {
-                icon: "Building",
-                title: "Госпартнеры",
-                description: "Сотрудничество с «Мой Бизнес», МКУ «ЦРП», Росмолодежь, «Опора России»"
-              },
-              {
-                icon: "Tv",
-                title: "Медиа",
-                description: "Выступления на ТВ и радио, экспертные комментарии"
-              },
-              {
-                icon: "MapPin",
-                title: "Благодарность города",
-                description: "За вклад в социально-экономическое развитие Владивостока"
-              },
-              {
-                icon: "TrendingUp",
-                title: "Корпоративные клиенты",
-                description: "MetLife, ЭкоЦентр, Sokroma и другие крупные компании"
-              }
-            ].map((achievement, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 animate-fade-in border-border/50 hover:border-primary/50" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon name={achievement.icon as any} className="w-8 h-8 text-primary icon-hover" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{achievement.title}</h3>
-                  <p className="text-muted-foreground">{achievement.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Courses Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl heading-font mb-4">
-              <span className="gradient-text">Авторские курсы</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {courses.map((course, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 animate-fade-in border-border/50 hover:border-primary/50" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-8">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold">{course.title}</h3>
-                    <span className="text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full text-sm">
-                      {course.price}
-                    </span>
-                  </div>
-                  <p className="text-muted-foreground mb-6">{course.description}</p>
-                  <ul className="space-y-3 mb-6">
-                    {course.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center">
-                        <Icon name="Check" className="w-5 h-5 text-primary mr-3 flex-shrink-0 icon-hover" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full" asChild>
-                    <a href={course.link} target="_blank" rel="noopener noreferrer">
-                      Узнать подробнее
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-card/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl lg:text-5xl heading-font mb-6">
-              <span className="gradient-text">Готовы внедрить ИИ в ваш бизнес?</span>
-            </h2>
-            <p className="text-xl text-muted-foreground mb-12">
-              Свяжитесь со мной для консультации, обучения команды или организации выступления
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <Card className="text-center hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Icon name="Phone" className="w-6 h-6 text-primary icon-hover" />
-                  </div>
-                  <h3 className="font-semibold mb-2">Телефон</h3>
-                  <a href="tel:+79520961106" className="text-primary hover:underline">
-                    +7 (952) 096-11-06
-                  </a>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Icon name="MessageCircle" className="w-6 h-6 text-primary icon-hover" />
-                  </div>
-                  <h3 className="font-semibold mb-2">Telegram</h3>
-                  <a href="https://t.me/chernikovgpt" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-                    @chernikovgpt
-                  </a>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Icon name="Globe" className="w-6 h-6 text-primary icon-hover" />
-                  </div>
-                  <h3 className="font-semibold mb-2">Сайт школы ИИ</h3>
-                  <a href="https://chernikovgpt.ru/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-                    chernikovgpt.ru
-                  </a>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="cta-primary text-lg px-8 py-6 font-semibold" asChild>
-                <a href="https://wa.me/message/YRBE2VIUHPMYN1" target="_blank" rel="noopener noreferrer">
-                  <Icon name="Calendar" className="mr-2" />
-                  Записаться на консультацию
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="cta-secondary text-lg px-8 py-6 font-semibold" asChild>
-                <a href="https://disk.yandex.ru/i/JPdPEtgswoRAdQ" target="_blank" rel="noopener noreferrer">
-                  <Icon name="Download" className="mr-2" />
-                  Скачать презентацию
-                </a>
-              </Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="gradient-text font-bold text-xl mb-4 md:mb-0">
-              Сергей Черников
+      <footer className="py-16 px-4 border-t border-slate-700">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+                  <Icon name="Brain" size={20} className="text-white" />
+                </div>
+                <span className="text-xl font-bold text-white">Formula Lite</span>
+              </div>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Помогаем предпринимателям запускать прибыльные IT-бизнесы на основе искусственного интеллекта.
+              </p>
             </div>
-            <div className="flex space-x-6">
-              <a href="https://chernikovgpt.ru/" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
-                Школа ИИ
-              </a>
-              <a href="https://gpt-boss.web.app/bonus/A00030" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
-                ИИ сервисы
-              </a>
-              <a href="https://t.me/chernikovgpt" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
-                Telegram
-              </a>
+            
+            <div>
+              <h4 className="text-white font-semibold mb-4">Контакты</h4>
+              <div className="space-y-2 text-slate-400 text-sm">
+                <div className="flex items-center space-x-2">
+                  <Icon name="Mail" size={16} />
+                  <span>info@formula-lite.ru</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Icon name="Phone" size={16} />
+                  <span>+7 (800) 123-45-67</span>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="text-white font-semibold mb-4">Следите за нами</h4>
+              <div className="flex space-x-4">
+                <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white hover:bg-slate-800">
+                  <Icon name="MessageCircle" size={20} />
+                </Button>
+                <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white hover:bg-slate-800">
+                  <Icon name="Youtube" size={20} />
+                </Button>
+              </div>
             </div>
           </div>
-          <div className="text-center mt-8 text-muted-foreground">
-            <p>© 2025 Сергей Черников. Эксперт по нейросетям и автоматизации бизнеса.</p>
+          
+          <div className="border-t border-slate-700 mt-8 pt-8 text-center">
+            <p className="text-slate-400 text-sm">
+              © 2025 Formula Lite. Все права защищены.
+            </p>
           </div>
         </div>
       </footer>
     </div>
   );
-}
+};
+
+export default Index;
